@@ -7,7 +7,9 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.Python
 build/
+develop-eggs/
 dist/
 downloads/
 eggs/
@@ -32,7 +34,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Test, coverage, and type-checking artifacts
+# Test, coverage, and profiling artifacts
 .pytest_cache/
 .coverage
 .coverage.*
@@ -43,6 +45,10 @@ coverage.xml
 *.cover
 *.py.cover
 .hypothesis/
+.prof
+.profraw
+
+# Type checkers and linters
 .mypy_cache/
 .dmypy.json
 dmypy.json
@@ -61,7 +67,7 @@ ENV/
 env.bak/
 venv.bak/
 
-# Jupyter Notebook
+# Jupyter
 .ipynb_checkpoints/
 
 # Documentation builds
@@ -75,11 +81,14 @@ db.sqlite3
 db.sqlite3-journal
 instance/
 .webassets-cache/
-.scrapy/
 
 # Task queues and schedulers
 celerybeat-schedule
 celerybeat.pid
+
+# Interactive Python
+.python_history
+.pythonstartup
 
 # IDEs and editors
 .idea/
@@ -94,11 +103,8 @@ celerybeat.pid
 # Operating system files
 .DS_Store
 Thumbs.db
-Desktop.ini
 
 # Temporary files
-.cache/
-tmp/
-temp/
 *.tmp
 *.bak
+.cache/
