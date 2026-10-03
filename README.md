@@ -1,30 +1,31 @@
 # data-toolkit
 
-A personal collection of practical utilities for cleaning, transforming, and inspecting everyday datasets.
+A small personal toolkit for cleaning, transforming, and inspecting everyday datasets.
 
 ## Features
 
-- Read and write CSV and JSON files
-- Clean missing or inconsistent values
+- Load CSV and JSON files
+- Clean missing or duplicate values
 - Filter, sort, and transform records
-- Summarize columns and basic statistics
-- Export processed data for further analysis
+- Generate quick dataset summaries
+- Export processed data to CSV or JSON
 
 ## Install
 
 ```bash
 git clone https://github.com/your-username/data-toolkit.git
 cd data-toolkit
-pip install -e .
+python -m pip install .
 ```
 
 ## Usage
 
 ```python
-from data_toolkit import load_data, summarize
+from data_toolkit import DataSet
 
-data = load_data("data/example.csv")
-print(summarize(data))
+data = DataSet.from_csv("input.csv")
+data.drop_duplicates()
+data.fill_missing("")
+print(data.summary())
+data.to_json("output.json")
 ```
-
-This is a personal project built around workflows I use regularly, so APIs may evolve as new use cases come up.
